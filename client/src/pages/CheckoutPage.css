@@ -1,0 +1,153 @@
+.checkout-page {
+    padding: 40px 0 80px;
+}
+
+.checkout-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--navy-500);
+    margin-bottom: 32px;
+}
+
+.checkout-layout {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 32px;
+    align-items: start;
+}
+
+.checkout-form {
+    padding: 28px;
+}
+
+.checkout-form:hover {
+    transform: none;
+}
+
+.checkout-form h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    color: var(--navy-500);
+    margin-bottom: 24px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.payment-section {
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 2px solid var(--gray-200);
+}
+
+.payment-section h3 {
+    font-size: 1rem;
+    color: var(--gray-800);
+    margin-bottom: 12px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    border: 2px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+}
+
+.payment-option.active {
+    border-color: var(--navy-500);
+    background: var(--navy-50);
+}
+
+.radio-dot {
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--navy-500);
+    border-radius: 50%;
+    position: relative;
+}
+
+.payment-option.active .radio-dot::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 8px;
+    height: 8px;
+    background: var(--navy-500);
+    border-radius: 50%;
+}
+
+/* Summary */
+.checkout-summary {
+    padding: 28px;
+    position: sticky;
+    top: 90px;
+}
+
+.checkout-summary:hover {
+    transform: none;
+}
+
+.checkout-summary h3 {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+}
+
+.checkout-items {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.checkout-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.checkout-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.checkout-item div {
+    flex: 1;
+}
+
+.checkout-item-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--gray-800);
+}
+
+.checkout-item-qty {
+    font-size: 0.78rem;
+    color: var(--gray-500);
+}
+
+.checkout-item span {
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.checkout-btn {
+    width: 100%;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .checkout-layout {
+        grid-template-columns: 1fr;
+    }
+}

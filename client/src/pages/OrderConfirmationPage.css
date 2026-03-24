@@ -1,0 +1,128 @@
+.confirmation-page {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.confirmation-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: 48px;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+.confirmation-icon {
+    color: var(--success);
+    margin-bottom: 20px;
+    animation: scaleIn 0.5s ease;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.confirmation-card h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--gray-900);
+    margin-bottom: 12px;
+}
+
+.confirmation-message {
+    color: var(--gray-500);
+    font-size: 1rem;
+    margin-bottom: 32px;
+}
+
+.order-details {
+    background: var(--gray-50);
+    border-radius: var(--radius-sm);
+    padding: 20px;
+    margin-bottom: 28px;
+    text-align: left;
+}
+
+.order-detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.order-detail-row:last-child {
+    border-bottom: none;
+}
+
+.order-detail-row span:first-child {
+    color: var(--gray-500);
+}
+
+.confirmation-items {
+    text-align: left;
+    margin-bottom: 28px;
+}
+
+.confirmation-items h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    color: var(--gray-800);
+}
+
+.conf-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.conf-item img {
+    width: 45px;
+    height: 45px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.conf-item div {
+    flex: 1;
+}
+
+.conf-item p {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.conf-item span {
+    font-size: 0.78rem;
+    color: var(--gray-500);
+}
+
+.confirmation-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+@media (max-width: 480px) {
+    .confirmation-card {
+        padding: 28px 20px;
+    }
+
+    .confirmation-actions {
+        flex-direction: column;
+    }
+}
